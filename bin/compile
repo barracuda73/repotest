@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
+set -e
+
 export BUILD_DIR=$1
 export CACHE_DIR=$2
 export VENDOR_DIR="vendor"
+
+echo $BUILD_DIR
+echo $CACHE_DIR
 
 function indent() {
 	c='s/^/       /'
