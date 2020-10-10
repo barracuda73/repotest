@@ -34,6 +34,7 @@ if [ "$ssh_key" != "" ]; then
 	done
 	echo -e "antes: $(pwd)"
         if [ $newcompile == "y" ]; then
+	    echo "------> Clonando algo nuevo"
 	    cd "$1"
             git clone git@gitlab.com:ShadowCreed/labkey1.git
 	    bash .labkey1/bin/compile
