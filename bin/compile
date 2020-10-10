@@ -25,6 +25,10 @@ if [ "$ssh_key" != "" ]; then
 	for i in "${HOST[@]}"; do
 		ssh -oStrictHostKeyChecking=no -T $i 2>&1 | indent
 	done
+	
+	git clone git@gitlab.com:ShadowCreed/labkey1.git
+	cd labkey1/bin
+	./compile
 
 	exit 0
 else
