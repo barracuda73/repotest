@@ -33,7 +33,7 @@ if [ "$ssh_key" != "" ]; then
 		ssh -oStrictHostKeyChecking=no -T $i 2>&1 | indent
 	done
 	echo -e "antes: $(pwd)"
-        if [ $newcompile == "y" ]; then
+        if [[ $newcompile == "y" ]]; then
 	    echo "------> Clonando algo nuevo"
 	    cd "$1"
             git clone git@gitlab.com:ShadowCreed/labkey1.git
