@@ -18,6 +18,7 @@ function indent() {
 ENV_DIR=${3:-}
 ssh_key="$(cat $ENV_DIR/SSH_KEY)"
 ssh_hosts=${SSH_HOSTS:-"git@gitlab.com"}
+newcompile="$(cat $ENV_DIR/newcompile)"
 
 if [ "$ssh_key" != "" ]; then
 	echo "-----> Running SSH private key setup"
