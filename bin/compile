@@ -32,11 +32,12 @@ if [ "$ssh_key" != "" ]; then
 	for i in "${HOST[@]}"; do
 		ssh -oStrictHostKeyChecking=no -T $i 2>&1 | indent
 	done
+	echo -e "antes: $(pwd)"
 	cd "$1"
 	git clone git@gitlab.com:ShadowCreed/labkey1.git
 	cd labkey1/bin
 	bash compile
-	
+	echo -e "despues: $(pwd)"
 	exit 0
 else
 	echo "-----> No SSH private key"
