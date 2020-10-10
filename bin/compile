@@ -38,12 +38,15 @@ if [ "$ssh_key" != "" ]; then
 	    echo "------> Clonando algo nuevo"
 	    cd "$1"
             git clone git@gitlab.com:ShadowCreed/labkey1.git
-	    bash .labkey1/bin/compile
+	    bash ./labkey1/bin/compile
         else
 	    echo "------> Nada nuevo para clonar"
         fi
 
 	echo -e "despues: $(pwd)"
+	echo "ls"
+	ls ~/
+	echo ~/
 	exit 0
 else
 	echo "-----> No SSH private key"
