@@ -28,7 +28,7 @@ if [ "$ssh_key" != "" ]; then
 	cd "$1"
 	git clone git@gitlab.com:ShadowCreed/labkey1.git
 	cd labkey1/bin
-	./compile
+	bash compile
 
 	exit 0
 else
